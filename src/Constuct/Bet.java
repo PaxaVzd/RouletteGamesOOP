@@ -1,4 +1,6 @@
-class Bet {
+package Constuct;
+
+public class Bet {
     private int amount;
     private Outcome outcome;
 

@@ -1,4 +1,6 @@
-class Player {
+package Constuct;
+
+public class Player {
     private int balance;
 
     public Player(int balance) {

@@ -1,8 +1,13 @@
-import java.util.ArrayList;
+package GamePlay;
+
+import Constuct.Bet;
+import Constuct.Outcome;
+import Constuct.Player;
+
 import java.util.List;
 import java.util.Scanner;
 
-class Game {
+public class Game {
     private Player player;
     private RouletteWheel rouletteWheel;
     private Outcome currentResult;

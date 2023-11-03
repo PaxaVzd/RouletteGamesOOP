@@ -1,4 +1,6 @@
-class Outcome {
+package Constuct;
+
+public class Outcome {
     private String name;
     private int odds;
 

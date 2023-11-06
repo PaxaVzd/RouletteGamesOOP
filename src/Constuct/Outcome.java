@@ -11,9 +11,9 @@ public class Outcome {
 
     public String getName() {
         return name;
-    }
+    } // Назва результату ставки
 
     public int getOdds() {
         return odds;
-    }
+    } // Коефіціент виграшу
 }

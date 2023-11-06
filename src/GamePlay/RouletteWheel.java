@@ -15,6 +15,7 @@ class RouletteWheel {
         random = new Random();
     }
 
+    // Додає переданий результат ставки (outcome) до списку можливих результатів ставок
     public void addOutcome(Outcome outcome) {
         outcomes.add(outcome);
     }
@@ -26,5 +27,5 @@ class RouletteWheel {
 
     public List<Outcome> getOutcomes() {
         return outcomes;
-    }
+    } // Список можливих результатів
 }

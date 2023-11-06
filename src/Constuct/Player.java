@@ -13,5 +13,5 @@ public class Player {
 
     public void adjustBalance(int amount) {
         balance += amount;
-    }
+    } // Оновлення балансу
 }

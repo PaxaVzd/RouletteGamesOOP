@@ -1,8 +1,8 @@
 package Constuct;
 
 public class Bet {
-    private int amount;
-    private Outcome outcome;
+    private int amount; // Вартість ставки
+    private Outcome outcome; // Результат ставки
 
     public Bet(int amount, Outcome outcome) {
         this.amount = amount;

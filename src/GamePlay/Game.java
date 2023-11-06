@@ -25,7 +25,7 @@ public class Game {
         rouletteWheel.addOutcome(green);
     }
 
-    public void placeBet(Bet bet) {
+    public void placeBet(Bet bet) { // приймає ставку і видає результат
         if (player.getBalance() >= bet.getAmount()) {
             Outcome spinResult = rouletteWheel.spin();
             currentResult = spinResult;

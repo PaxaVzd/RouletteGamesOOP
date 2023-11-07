@@ -3,15 +3,25 @@ package GamePlay;
 import Constuct.Bet;
 import Constuct.Outcome;
 import Constuct.Player;
+import Constuct.RouletteWheel;
 
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Клас Game представляє ігровий процес рулетки, де гравець може робити ставки та грати.
+ */
 public class Game {
+    /** Гравець, який бере участь у грі та має баланс. */
     private Player player;
+    /** Рулетка для визначення результату ставки. */
     private RouletteWheel rouletteWheel;
+    /** Поточний результат ставки після обертання рулетки. */
     private Outcome currentResult;
 
+    /**
+     * Конструктор класу Game, який ініціалізує гравця, рулетку та визначає можливі результати ставок.
+     */
     public Game() {
         player = new Player(1000);
         rouletteWheel = new RouletteWheel();
@@ -25,7 +35,12 @@ public class Game {
         rouletteWheel.addOutcome(green);
     }
 
-    public void placeBet(Bet bet) { // приймає ставку і видає результат
+    /**
+     * Розміщує ставку та визначає результат гри.
+     *
+     * @param bet Ставка, яку гравець розміщує.
+     */
+    public void placeBet(Bet bet) {
         if (player.getBalance() >= bet.getAmount()) {
             Outcome spinResult = rouletteWheel.spin();
             currentResult = spinResult;
@@ -45,6 +60,9 @@ public class Game {
         }
     }
 
+    /**
+     * Починає гру та дозволяє гравцю робити ставки, доки є гроші на балансі.
+     */
     public void play() {
         Scanner scanner = new Scanner(System.in);
         while (player.getBalance() > 0) {
